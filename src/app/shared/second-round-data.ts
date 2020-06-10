@@ -1,6 +1,6 @@
 const text1 = 'Kterým dvoum lidem z KPMG to už rozhodně nevyjde a svatbu mít nebudou?';
 const text2 = 'Proč Milachi nepřišlo vtipné naše kouzelné zrcadlo na lyžáku?';
-const text3 = 'Na jaký módní doplněk muž obvykle Evču sbalil?';
+const text3 = 'Kdo z nás ví nejlíp jak se dostat do kufru Verčinýho auta, zvlášť když je v něm víno?';
 const text4 = 'Kolik peněz jsi zaplatila za Big Shock tyčinky, kterými si nás obdarovala na zimním 7apůl festu?';
 const text5 = 'Jakou přezdívkou tě častovala Lenka Kaplová ve školce?';
 
