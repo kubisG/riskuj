@@ -4,7 +4,7 @@
             <span>{{ categoryName }}</span>
             <span>{{ question?.value }}</span>
         </section>
-        <section class="text">
+        <section *ngIf="question?.text" class="text">
             <span>{{ question?.text }}</span>
         </section>
         <section class="buttons">
