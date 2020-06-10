@@ -1,0 +1,42 @@
+div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    width: 100vw;
+    height: 100vh;
+    
+    background-image: linear-gradient(45deg, #0e36b9 30%, #041346 75%);
+
+    z-index: 100;
+    opacity: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: #fff;
+
+    section {
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+    }
+}
+
+.header, .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 1px solid;
+    width: 80%;
+}
+
+.header {
+    font-size: xxx-large;
+}
+
+.text {
+    font-size: xx-large;
+}

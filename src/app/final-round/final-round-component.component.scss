@@ -1,0 +1,44 @@
+@import '../../../src/colors';
+
+input[type=number] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+}
+
+#summary {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-grow: 1;
+    height: 150px;
+}
+
+.bet-points {
+    display: flex;
+    align-items: center;
+
+    button {
+        background-color: $highlight;
+        height: 45px;
+    }
+}
+
+.bet {
+    color: #fff;
+    font-size: larger;
+}
+
+app-question {
+    width: 300px;
+    height: 200px;
+}
+
+app-summary {
+    margin: 10px 0;
+    border-bottom: 1px solid;
+}

@@ -1,0 +1,12 @@
+<div [@fullscreen]="state">
+    <section class="header">
+        <span>{{ category?.name }}</span>
+    </section>
+    <section class="text">
+        <span>{{ category?.text }}</span>
+    </section>
+    <section class="buttons">
+        <button id="correct" (click)="onClick(true)">správně</button>
+        <button id="wrong" (click)="onClick(false)">špatně</button>
+    </section>
+</div>

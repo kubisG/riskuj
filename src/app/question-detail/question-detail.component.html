@@ -1,0 +1,25 @@
+<div [@fullscreen]="state" [class]="getClass(question)">
+    <ng-container *ngIf="!question?.brick">
+        <section class="header">
+            <span>{{ categoryName }}</span>
+            <span>{{ question?.value }}</span>
+        </section>
+        <section class="text">
+            <span>{{ question?.text }}</span>
+        </section>
+        <section class="buttons">
+            <button id="correct" (click)="onClick(true)">správně</button>
+            <button id="wrong" (click)="onClick(false)">špatně</button>
+        </section>
+    </ng-container>
+    <ng-container *ngIf="question?.brick">
+        <section class="header">
+            <span *ngIf="question?.brick === 'bronze'">Bronzová cihlička</span>
+            <span *ngIf="question?.brick === 'silver'">Stříbrná cihlička</span>
+            <span *ngIf="question?.brick === 'gold'">Zlatá cihlička</span>
+        </section>
+        <section class="buttons">
+            <button id="correct" (click)="onClick(true)">správně</button>
+        </section>
+    </ng-container>
+</div>

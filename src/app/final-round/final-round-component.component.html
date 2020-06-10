@@ -1,0 +1,29 @@
+<div id="container">
+    <div id="playfield">
+        <div class="category" *ngFor="let rowQuestions of questions">
+            <div class="question" *ngFor="let question of rowQuestions">
+                <app-question 
+                    [id]="question.id"
+                    [value]="(question.answered) ? question.value : '?'"
+                    [answered]="question.answered"
+                    [clazz]="getClass(question)"
+                    (showQuestion)="onShowQuestion($event)">
+                </app-question>
+            </div>
+        </div>
+        <app-question-detail
+            [state]="state" 
+            [question]="selectedQuestion"
+            (hideQuestion)="onHideQuestion($event)">
+        </app-question-detail>
+    </div>
+    <div id="summary">
+        <div class="bet-points">
+            <input type="number" id="fname" [(ngModel)]="points" placeholder="Body...">
+            <button type="button" (click)="betPoints(points)">Vsadit</button>
+        </div>
+        <app-summary [points]="points$ | async"></app-summary>
+        <span class="bet" *ngFor="let bet of (bets$ | async); let i = index">Sázka {{ i+1 }}: {{ bet }}</span>
+    </div>
+</div>
+

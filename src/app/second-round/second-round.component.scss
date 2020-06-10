@@ -1,0 +1,32 @@
+@import '../../../src/colors';
+
+:host {
+    display: flex;
+    flex-direction: column;
+}
+
+#summary {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+    height: 150px;
+}
+
+#bonus-button {
+    background-color: $highlight;
+    width: 200px;
+    height: 50px;
+}
+
+app-countdown {
+    width: 93vw;
+    align-self: center;
+    margin-top: 25px;
+}
+
+app-question {
+    width: 200px;
+    height: 110px;
+}

@@ -1,0 +1,34 @@
+<div id="container">
+    <div id="playfield">
+        <div class="category" *ngFor="let rowQuestions of questions">
+            <div class="question" *ngFor="let question of rowQuestions">
+                <app-question 
+                    [id]="question.id"
+                    [value]="question.value"
+                    [answered]="question.answered"
+                    [clazz]="(question.answered) ? 'answered' : ''"
+                    (showQuestion)="onShowQuestion($event)">
+                </app-question>
+            </div>
+        </div>
+        <app-question-detail
+            [state]="state" 
+            [question]="selectedQuestion"
+            (hideQuestion)="onHideQuestion($event)">
+        </app-question-detail>
+    </div>
+    <div id="summary">
+        <app-summary
+            [bonuses]="bonuses$ | async"
+            [points]="points$ | async">
+        </app-summary>
+        <button id="bonus-button" (click)="useBonus()" [disabled]="(bonuses$ | async) === 0">Použít bonus</button>
+    </div>
+</div>
+<app-countdown [minutes]="2" (finished)="onCountdownFinished()"></app-countdown>
+<app-round-summary *ngIf="showRoundSummary"
+    title="Konec 2. kola"
+    [bonuses]="bonuses$ | async"
+    [points]="points$ | async"
+    (nextRound)="onNextRound()">
+</app-round-summary>

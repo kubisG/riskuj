@@ -1,0 +1,45 @@
+<div id="container">
+    <div id="playfield">
+        <div class="category" *ngFor="let category of categories">
+            <app-category
+                [id]="category.id"
+                [name]="category.name"
+                [locked]="category.locked"
+                [answered]="category.answered"
+                (showCategory)="onShowCategory($event)">
+            </app-category>
+            <div class="question" *ngFor="let question of category.questions">
+                <app-question 
+                    [id]="question.id"
+                    [value]="question.value"
+                    [answered]="question.answered"
+                    [clazz]="(question.answered) ? 'answered' : ''"
+                    (showQuestion)="onShowQuestion($event)">
+                </app-question>
+            </div>
+        </div>
+        <app-question-detail
+            [state]="questionState" 
+            [question]="selectedQuestion"
+            [categoryName]="selectedCategory?.name"
+            (hideQuestion)="onHideQuestion($event)">
+        </app-question-detail>
+        <app-category-detail
+            [state]="categoryState" 
+            [category]="selectedCategory"
+            (hideCategory)="onHideCategory($event)">
+        </app-category-detail>
+    </div>
+    <div id="summary">
+        <app-summary 
+            [bonuses]="bonuses$ | async" 
+            [points]="points$ | async">
+        </app-summary>
+    </div>
+</div>
+<app-round-summary *ngIf="showRoundSummary"
+    title="Konec 1. kola"
+    [bonuses]="bonuses$ | async"
+    [points]="points$ | async"
+    (nextRound)="onNextRound()">
+</app-round-summary>
