@@ -25,7 +25,7 @@
         <button id="bonus-button" (click)="useBonus()" [disabled]="(bonuses$ | async) === 0">Použít bonus</button>
     </div>
 </div>
-<app-countdown [minutes]="2" (finished)="onCountdownFinished()"></app-countdown>
+<app-countdown [minutes]="25" (finished)="onCountdownFinished()"></app-countdown>
 <app-round-summary *ngIf="showRoundSummary"
     title="Konec 2. kola"
     [bonuses]="bonuses$ | async"
