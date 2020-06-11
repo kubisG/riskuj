@@ -51,7 +51,7 @@ const questions4 = [
 ];
 
 const text21 = 'Co řekne Marion v seriálu Chalupáři (díl Náhradník), že mají Bohuš Císař (Josef Kemr) a Tonda Balabán (Ilja Prachař) uschováno v šatně?';
-const text22 = 'Kde se ve filmu Světáci stala chyba , že se jeden z okradených mužů (Menšík) vrátil do bytu Trčkové, kde ho Božka (Bohdalka) předtím obrala';
+const text22 = 'Kde se ve filmu Světáci stala chyba , že se jeden z okradených mužů (Menšík) vrátil do bytu Trčkové, kde ho Božka (Bohdalka) předtím obrala?';
 const text23 = 'Kolik let bylo herci L. Peškovi v době, kdy hrál studenta gymnázia ve filmu Škola základ života?';
 const text24 = 'Doplň následující hlášku z filmu Anděl na horách: Anděl: "Co lezeš na lyže, když to neumíš?" Puleček: "Já že to neumím? Víš kolik let už jezdím na hory? Nemysli si....?"';
 const text25 = 'Proč Josef Kemr alias Plha chodil na natáčení filmu Marečku, podejte mi pero o půl deváté, tedy o půl hodinu později než ostatní herci?';
@@ -64,8 +64,8 @@ const questions5 = [
 ];
 
 const text26 = 'Kdo a kde říká následující text: "Znáte to, vstanete do šedivého rána, vyčistíte si zuby, stihnete přesně jeden lok kávy, strávíte den v práci, poklidíte dům, dojíte snídani, vyčistíte si zuby a jdete spát."?';
-const text27 = 'V kterém roce měl premiéru tvůj nejoblíbenější taneční muzikál Lightnint?';
-const text28 = 'Jaký byl slogan slogan Perly Music Hall?';
+const text27 = 'V kterém roce měl premiéru tvůj nejoblíbenější taneční muzikál Lightning?';
+const text28 = 'Jaký byl slogan Perly Music Hall?';
 const text29 = 'Jak se jmenuje dítě Jardy Petříka - též zvaného Peca a Verči Konečné?';
 const text30 = 'Jaké jméno dostal strašidelný zajíc, který byl již druhým rokem v Zábřeze na Nám. Osvobození a s nímž máme společnou fotku z oslavy tvých narozenin?';
 const questions6 = [
