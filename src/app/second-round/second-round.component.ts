@@ -42,6 +42,7 @@ export class SecondRoundComponent implements OnInit {
   onHideQuestion(question: Question) {
     (question.correct) ? this.store.dispatch(new AddPoints(question.value)) : this.store.dispatch(new SubstractPoints(question.value));
     this.questions = this.questions.map((row) => row.map((q) => (q.id === question.id) ? {...question, answered: true } : q));
+    this.showRoundSummary = _.every(_.flattenDeep(this.questions), ['answered', true]);
     this.selectedQuestion = null;
     this.state = 'hide';
   }

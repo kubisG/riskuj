@@ -3,12 +3,12 @@ import { Question } from '../shared/question';
 import { Category } from '../shared/category';
 import { categories } from '../shared/first-round-data';
 import { Router } from '@angular/router';
-
-import * as _ from 'lodash';
 import { Select, Store } from '@ngxs/store';
 import { AppState } from '../state/app.state';
 import { Observable } from 'rxjs';
 import { AddBonus, AddPoints } from '../state/app.actions';
+
+import * as _ from 'lodash';
 
 @Component({
   selector: 'app-fist-round-component',
@@ -64,7 +64,6 @@ export class FistRoundComponentComponent implements OnInit {
   onHideCategory(category: Category) {
     if (category.correct) {
       this.store.dispatch(new AddBonus());
-      console.log("add bonus");
     }
     this.categories = _.map(this.categories, (cat) => (cat.id === category.id) ? ({ ...category, answered: true }) : cat);
     this.showRoundSummary = _.every(this.categories, ['answered', true]);
